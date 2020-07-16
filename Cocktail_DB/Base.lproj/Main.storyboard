@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AfL-Sd-ogb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Drinks-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CocktailsListViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="D6V-A8-CNT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kTe-vq-7L6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QjW-cO-yN2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="D6V-A8-CNT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A9s-cS-uEb"/>
+                            <constraint firstItem="D6V-A8-CNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pji-Sx-9I6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D6V-A8-CNT" secondAttribute="bottom" id="pNe-gd-1il"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D6V-A8-CNT" secondAttribute="trailing" id="yj6-5y-tzF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drinks" largeTitleDisplayMode="always" id="uPh-45-xTZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="VI7-nl-dej"/>
+                        <barButtonItem key="rightBarButtonItem" image="filter" id="6sw-ra-iT8">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="G2l-qC-kKT" kind="show" id="STw-a9-KJH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="D6V-A8-CNT" id="Vgl-6X-vcs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="165"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="fO1-8P-0OV">
+            <objects>
+                <viewController id="G2l-qC-kKT" customClass="FiltersListViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xb3-f4-VQY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3av-4L-y0W">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="G2l-qC-kKT" id="3NT-hv-JaX"/>
+                                    <outlet property="delegate" destination="G2l-qC-kKT" id="T1g-Ju-L8N"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsi-94-JI7">
+                                <rect key="frame" x="27" y="645" width="366" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="oO4-fc-HVe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <state key="normal" title="APPLY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapApply:" destination="G2l-qC-kKT" eventType="touchUpInside" id="zSs-6u-oTt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fsi-94-JI7" secondAttribute="bottom" constant="110" id="93s-MY-RYy"/>
+                            <constraint firstItem="3av-4L-y0W" firstAttribute="top" secondItem="39P-Yd-uhG" secondAttribute="top" id="Fbd-fI-MBb"/>
+                            <constraint firstItem="39P-Yd-uhG" firstAttribute="trailing" secondItem="fsi-94-JI7" secondAttribute="trailing" constant="21" id="Hf0-eZ-8yf"/>
+                            <constraint firstItem="39P-Yd-uhG" firstAttribute="bottom" secondItem="3av-4L-y0W" secondAttribute="bottom" id="ISd-L8-xRk"/>
+                            <constraint firstItem="fsi-94-JI7" firstAttribute="leading" secondItem="39P-Yd-uhG" secondAttribute="leading" constant="27" id="OQ9-8r-NPN"/>
+                            <constraint firstItem="39P-Yd-uhG" firstAttribute="trailing" secondItem="3av-4L-y0W" secondAttribute="trailing" id="Pgp-1E-ua5"/>
+                            <constraint firstItem="3av-4L-y0W" firstAttribute="leading" secondItem="39P-Yd-uhG" secondAttribute="leading" id="X2h-xI-bfy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="39P-Yd-uhG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filters" id="TWj-3g-yTP"/>
+                    <connections>
+                        <outlet property="tableView" destination="3av-4L-y0W" id="eOf-x8-xRL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Je-9P-AEy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="165"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="L19-2Z-sHU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AfL-Sd-ogb" customClass="NavigationViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" backIndicatorImage="back" backIndicatorTransitionMaskImage="back" id="NW9-mF-FMi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="-600" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dmf-b8-oBU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1z7-HH-X9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="165.40178571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="29" height="24"/>
+        <image name="filter" width="28" height="29"/>
+    </resources>
+</document>
